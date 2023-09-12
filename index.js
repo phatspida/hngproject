@@ -10,11 +10,12 @@ var x = setInterval(function getUTCTime(){
     const seconds = now.getUTCSeconds();
     const milliseconds = now.getUTCMilliseconds();
 
-    var current_day = weekday[now.getDay()];
+    
     var current_time = `${hours}:${minutes}:${seconds}.${milliseconds}`;
     document.querySelector("[data-testid='currentUTCTime']").innerHTML = current_time;
     */
 
+    var current_day = weekday[now.getDay()];
     document.querySelector("[data-testid='currentUTCTime']").innerHTML = now.getTime();
 
     document.querySelector("[data-testid='currentDayOfTheWeek']").innerHTML = current_day;
